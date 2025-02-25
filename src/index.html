@@ -1,0 +1,103 @@
+<style>
+    body{
+        background-color: rgb(22, 22, 30);
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    h1{
+        font-size: 10vw;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .options{
+        font-size: 35px;
+        width: 150px;
+        transition: .5s all;
+        position: relative;
+        text-align: right;
+
+        -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   user-select: none;
+   cursor: pointer;
+    }
+
+    .options:hover{
+        font-size: 35px;
+        width: 180px;
+        transition: .5s all;
+        position: relative;
+        text-align: right;
+
+        -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   user-select: none;
+   cursor: pointer;
+    }
+
+    a{
+        color: rgb(207, 207, 207);
+    }
+</style>
+
+
+
+<script>
+    window.onload = function() {
+        document.onload = document.getElementById('myLogo').style.opacity = 1;
+
+        setTimeout(() => {
+            document.getElementById('myLogo').style.transition = '1s all';
+            document.getElementById('menubutton01').style.left = '-5px';
+            document.getElementById('menubutton02').style.left = '-29px';
+}, "700");
+};
+</script>
+
+
+
+
+<div id='menubutton01' style="left: -205px;" class="options" onclick="{
+            document.getElementById('menubutton01').style.left = '-205px';
+            document.getElementById('menubutton02').style.left = '-229px';
+            document.getElementById('myLogo').style.top = '0vw';
+            document.getElementById('myLogo').style.height = '12vw';
+            document.getElementById('myLogo').style.left = '38.5vw';
+
+            setTimeout(function() {
+                document.getElementById('project01').style.fontSize = '120%';
+                document.getElementById('project02').style.fontSize = '120%';
+                document.getElementById('projectHeader').style.fontSize = '120%';
+                document.getElementById('menubutton03').style.left = '-42px';
+}, 1000);
+
+}">Projects</div>
+<div id='menubutton02' style="left: -229px; margin-top: 10px;" class="options" onclick="location.href='https://www.github.com/LukeMcRae7';">Github</div>
+<div id='menubutton03' style="left: -242px; top: -92px;" class="options" onclick="{
+    document.getElementById('menubutton03').style.left = '-242px';
+    document.getElementById('myLogo').style.top = '12vw';
+    document.getElementById('myLogo').style.height = '20vw';
+    document.getElementById('myLogo').style.left = '31vw';
+
+    document.getElementById('project01').style.fontSize = '0%';
+    document.getElementById('project02').style.fontSize = '0%';
+    document.getElementById('projectHeader').style.fontSize = '0%';
+
+        setTimeout(function() {
+        document.getElementById('menubutton01').style.left = '-5px';
+        document.getElementById('menubutton02').style.left = '-29px';
+}, 1000);
+}">Home</div>
+
+
+<img id="myLogo"  src="./Assets/lukemcrae.com-logo-white.png" style="height: 20vw; top: 12vw; left: 31vw; position: absolute; transition: 2s all; opacity: 0;text-align: center;">
+<div style="top: 5vw; position: relative" id="projectsContainer">
+    <h2 id='projectHeader' style="font-weight: 100; position: relative; font-size: 0%; transition: 0.5s all;">Projects</h2>
+    <a id='project01' style="font-size: 0%; transition: 0.5s all;" href="https://lukemcrae.com/esl">ESL games</a><br>
+    <a id='project02' style="font-size: 0%; transition: 0.5s all;" href="https://github.com/LukeMcRae7">Github</a>
+</div>
